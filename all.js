@@ -1,10 +1,10 @@
 const { createApp, ref, component } = Vue;
 const app = Vue.createApp({
-  components: {
-    "header-component": {
-      template: "#header-component",
-    },
-  },
+  // components: {
+  //   "header-component": {
+  //     template: "#header-component",
+  //   },
+  // },
   setup() {
     const views = ref({});
 
