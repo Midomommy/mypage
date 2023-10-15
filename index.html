@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>景點收藏管理網站</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!--HEADER-->
+      <!-- <header-component></header-component> -->
+      <!-- <script type="text/x-template" id="header-component">
+      
+    </script> -->
+      <!-- <div id="header-component"></div> -->
+      <header-component></header-component>
+      <!--END HEADER-->
+      <main>
+        <!--說明文字-->
+        <section class="py-2 container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light text-center">景點收藏管理網站</h1>
+              <p class="text-center">
+                <a href="#" class="btn btn-primary my-2 me-2">立即註冊</a>
+                <a href="#" class="btn btn-secondary my-2">立即登入</a>
+              </p>
+              <p class="lead text-body-secondary">
+                [前台]<br />
+                - 登入前：註冊、登入、顯示首頁景點列表 <br />- 登入後：<br />
+                -- 點入景點詳細列表，出現收藏按鈕，可收藏該景點<br />
+                -- 可觀看個人收藏列表<br />
+                [後台（登入後）]<br />
+                1. 登入後會依照權限，判斷轉址到後台頁面<br />
+                2. 首頁顯示景點列表 <br />3. 新增景點功能<br />
+                4. 編輯景點功能 <br />5. 刪除景點功能
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--END 說明文字-->
+        <!--景點列表-->
+        <div class="album py-5 bg-body-tertiary">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col" v-for="view in views">
+                <div class="card shadow-sm">
+                  <svg
+                    class="bd-placeholder-img card-img-top"
+                    width="100%"
+                    height="225"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                    <rect width="100%" height="100%" fill="#55595c" />
+                    <text x="1%" y="10%" fill="#eceeef">{{view.name}}</text>
+                  </svg>
+                  <div class="card-body">
+                    <p class="card-text">
+                      {{view.description.slice(0,50)+"..."}}
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="btn-group">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-secondary"
+                        >
+                          View
+                        </button>
+                        <!-- <button
+                          type="button"
+                          class="btn btn-sm btn-outline-secondary"
+                        >
+                          Edit
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--END 景點列表-->
+      </main>
+      <!--footer列表-->
+      <footer class="text-body-secondary py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p class="mb-1">景點管理收藏網站 是個 範例網站</p>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="all.js"></script>
+  </body>
+</html>
