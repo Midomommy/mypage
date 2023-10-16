@@ -23,15 +23,15 @@
       <!--END HEADER-->
       <main>
         <!--說明文字-->
-        <section class="py-2 container">
+        <section class="container py-2">
           <div class="row py-lg-5">
-            <div class="col-lg-6 col-md-8 mx-auto">
-              <h1 class="fw-light text-center">景點收藏管理網站</h1>
+            <div class="mx-auto col-lg-6 col-md-8">
+              <h1 class="text-center fw-light">景點收藏管理網站</h1>
               <p class="text-center">
-                <a href="#" class="btn btn-primary my-2 me-2">立即註冊</a>
-                <a href="#" class="btn btn-secondary my-2">立即登入</a>
+                <a href="#" class="my-2 btn btn-primary me-2">立即註冊</a>
+                <a href="#" class="my-2 btn btn-secondary">立即登入</a>
               </p>
-              <p class="lead text-body-secondary">
+              <p class="text-body-secondary lead">
                 [前台]<br />
                 - 登入前：註冊、登入、顯示首頁景點列表 <br />- 登入後：<br />
                 -- 點入景點詳細列表，出現收藏按鈕，可收藏該景點<br />
@@ -46,11 +46,11 @@
         </section>
         <!--END 說明文字-->
         <!--景點列表-->
-        <div class="album py-5 bg-body-tertiary">
+        <div class="bg-body-tertiary py-5 album">
           <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <div class="col" v-for="view in views">
-                <div class="card shadow-sm">
+                <div class="shadow-sm card">
                   <svg
                     class="bd-placeholder-img card-img-top"
                     width="100%"
@@ -96,7 +96,7 @@
       <!--footer列表-->
       <footer class="text-body-secondary py-5">
         <div class="container">
-          <p class="float-end mb-1">
+          <p class="mb-1 float-end">
             <a href="#">Back to top</a>
           </p>
           <p class="mb-1">景點管理收藏網站 是個 範例網站</p>
